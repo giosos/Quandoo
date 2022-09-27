@@ -4,8 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class RestaurantPage extends Page{
-    public RestaurantPage(WebDriver driver){
+public class RestaurantPage extends Page {
+    public RestaurantPage(WebDriver driver) {
         super(driver);
     }
 
@@ -17,6 +17,11 @@ public class RestaurantPage extends Page{
 
     @FindBy(xpath = "//*[@data-qa='search-bar-dining-input']")
     static WebElement searchBar;
+
+    @FindBy (xpath = "//*[@data-qa='reservation-tab']")
+    static WebElement reserveNowBtn;
+
+
 
     public void findButton() throws InterruptedException {
         findButton.click();
@@ -33,6 +38,11 @@ public class RestaurantPage extends Page{
     public void searchBar() throws InterruptedException {
         searchBar.click();
         Thread.sleep(5000);
+
+    }
+    public static void reserveNowBtn() throws InterruptedException {
+        reserveNowBtn.click();
+        Thread.sleep(7000);
 
     }
 

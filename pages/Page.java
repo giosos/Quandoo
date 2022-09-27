@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
  */
 public abstract class Page<driver> {
 
-  protected static WebDriver driver;
+  private static WebDriver driver;
 
   /*
    * Constructor injecting the WebDriver interface
